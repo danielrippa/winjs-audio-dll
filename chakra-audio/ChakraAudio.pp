@@ -113,7 +113,6 @@ implementation
     CheckParams('openFileChannel', Args, ArgCount, [jsString], 1);
 
     aFileName := JsStringAsString(Args^);
-    Writeln(aFileName);
     Result := IntAsJsNumber(BASS_StreamCreateFile(False, PChar(aFileName), 0, 0, BASS_STREAM_AUTOFREE));
   end;
 
